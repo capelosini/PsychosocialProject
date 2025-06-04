@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style/loadGame.css" />
+        <link rel="stylesheet" href="style/global.css" />
+        <title>Psychosocial - Carregar Jogo</title>
+    </head>
+    <body>
+        <div class="load-game-container">
+            <div class="load-title glitch">SELECIONAR DADOS NEURAIS</div>
+
+            <div class="save-slots-wrapper">
+                <div class="save-slot active" onclick="loadSave(1)">
+                    <div class="slot-header">
+                        <span class="slot-number">SLOT 01</span>
+                        <span class="slot-status">ATIVO</span>
+                    </div>
+                    <div class="slot-info">
+                        <div class="info-line">
+                            <span class="info-label">PROGRESSO:</span>
+                            <span class="info-value"
+                                >MISSÃO 03 - INFILTRAÇÃO</span
+                            >
+                        </div>
+                        <div class="info-line">
+                            <span class="info-label">LOCAL:</span>
+                            <span class="info-value"
+                                >DISTRITO K-12 (ZONA CINZENTA)</span
+                            >
+                        </div>
+                        <div class="info-line">
+                            <span class="info-label">TEMPO JOGADO:</span>
+                            <span class="info-value">12H 45M</span>
+                        </div>
+                        <div class="info-line">
+                            <span class="info-label">DATA SALVA:</span>
+                            <span class="info-value">2077.06.03 // 19:30</span>
+                        </div>
+                    </div>
+                    <div class="slot-preview"></div>
+                </div>
+
+                <div class="save-slot" onclick="loadSave(2)">
+                    <div class="slot-header">
+                        <span class="slot-number">SLOT 02</span>
+                        <span class="slot-status">DISPONÍVEL</span>
+                    </div>
+                    <div class="slot-info">
+                        <div class="info-line">
+                            <span class="info-label">PROGRESSO:</span>
+                            <span class="info-value">-- NOVO DADOS --</span>
+                        </div>
+                        <div class="info-line">
+                            <span class="info-label">LOCAL:</span>
+                            <span class="info-value">-- VAZIO --</span>
+                        </div>
+                        <div class="info-line">
+                            <span class="info-label">TEMPO JOGADO:</span>
+                            <span class="info-value">00H 00M</span>
+                        </div>
+                        <div class="info-line">
+                            <span class="info-label">DATA SALVA:</span>
+                            <span class="info-value">-- -- -- // --:--</span>
+                        </div>
+                    </div>
+                    <div class="slot-preview empty"></div>
+                </div>
+
+                <div class="save-slot" onclick="loadSave(3)">
+                    <div class="slot-header">
+                        <span class="slot-number">SLOT 03</span>
+                        <span class="slot-status">DISPONÍVEL</span>
+                    </div>
+                    <div class="slot-info">
+                        <div class="info-line">
+                            <span class="info-label">PROGRESSO:</span>
+                            <span class="info-value">-- NOVO DADOS --</span>
+                        </div>
+                        <div class="info-line">
+                            <span class="info-label">LOCAL:</span>
+                            <span class="info-value">-- VAZIO --</span>
+                        </div>
+                        <div class="info-line">
+                            <span class="info-label">TEMPO JOGADO:</span>
+                            <span class="info-value">00H 00M</span>
+                        </div>
+                        <div class="info-line">
+                            <span class="info-label">DATA SALVA:</span>
+                            <span class="info-value">-- -- -- // --:--</span>
+                        </div>
+                    </div>
+                    <div class="slot-preview empty"></div>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button class="action-button primary" onclick="confirmLoad()">
+                    CARREGAR SELEÇÃO
+                </button>
+                <button class="action-button" onclick="deleteSave()">
+                    DELETAR DADOS
+                </button>
+                <button
+                    class="action-button back"
+                    onclick="window.location.href='mainMenu.html'"
+                >
+                    VOLTAR AO MENU
+                </button>
+            </div>
+        </div>
+
+        <script>
+            let selectedSlot = 1; // Default selected slot
+
+            function loadSave(slotNumber) {
+                const slots = document.querySelectorAll(".save-slot");
+                slots.forEach((slot) => slot.classList.remove("active"));
+                document
+                    .querySelector(`.save-slot:nth-child(${slotNumber})`)
+                    .classList.add("active");
+                selectedSlot = slotNumber;
+                console.log(`Slot ${slotNumber} selecionado.`);
+            }
+
+            function confirmLoad() {
+                if (selectedSlot === 1) {
+                    // Only slot 1 has mock data
+                    alert(`Carregando jogo do Slot ${selectedSlot}...`);
+                    window.location.href = "game.html"; // Redirect to game screen
+                } else {
+                    alert(
+                        `Slot ${selectedSlot} está vazio. Não é possível carregar.`,
+                    );
+                }
+            }
+
+            function deleteSave() {
+                alert(
+                    `Função de deletar dados do Slot ${selectedSlot} (não implementado).`,
+                );
+            }
+        </script>
+    </body>
+</html>

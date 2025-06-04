@@ -1,0 +1,30 @@
+Objetivo Principal
+Avaliar a eficácia e usabilidade do sistema de HUD para fornecer informações críticas ao jogador durante o combate
+Objetivos Específicos
+
+Verificar legibilidade e visibilidade de informações vitais (Quais: )
+Testar intuitividade da disposição dos elementos
+//Avaliar impacto na experiência de jogo
+Identificar pontos de confusão ou sobrecarga visual
+
+Contexto
+O participante está no meio de uma missão de combate e precisa monitorar constantemente seu status enquanto cumpre o 4o objetivo da missão 	
+
+
+-Monitoramento de Status
+Identificar nível atual de vida e escudo
+Expectativa quando está em situação crítica (exemplos em jogos)
+Localizar informações de munição
+
+
+- Navegação por Objetivos
+Encontrar lista de objetivos da missão
+Identificar objetivos completados vs pendentes
+Compreender próxima ação necessária
+
+
+- Uso de Habilidades
+Localizar painel de habilidades
+O que entende sobre as habilidades? o que elas significam para o usuário?
+Identificar habilidades disponíveis vs em cooldown
+Compreender tempo restante de recarga

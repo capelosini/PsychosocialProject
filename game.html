@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style/game.css" />
+        <link rel="stylesheet" href="style/global.css" />
+        <script src="lib/three.min.js"></script>
+        <script src="lib/OrbitControls.js"></script>
+
+        <title>Psychosocial</title>
+    </head>
+    <body>
+        <canvas id="three-canvas"></canvas>
+
+        <div class="hud-container">
+            <div class="crosshair"></div>
+            <div class="enhanced-reticle"></div>
+
+            <div class="hit-marker">✕</div>
+
+            <div class="damage-number">-247</div>
+
+            <div class="health-shield">
+                <div class="bar-container">
+                    <div class="bar-label health-label">VIDA</div>
+                    <div class="bar health-bar">
+                        <div class="bar-fill health-fill"></div>
+                        <div class="bar-text">150/200</div>
+                    </div>
+                </div>
+                <div class="bar-container">
+                    <div class="bar-label shield-label">ESCUDO</div>
+                    <div class="bar shield-bar">
+                        <div class="bar-fill shield-fill"></div>
+                        <div class="bar-text">90/200</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="weapon-info">
+                <div class="weapon-name glitch">RIFLE DE PLASMA MK-7</div>
+                <div class="ammo-counter">
+                    24<span class="ammo-reserve">/ 240</span>
+                </div>
+            </div>
+
+            <div class="radar">
+                <div class="radar-center"></div>
+                <div class="radar-blip blip-1"></div>
+                <div class="radar-blip blip-2"></div>
+                <div class="radar-blip blip-3"></div>
+                <div class="map-indicator">M</div>
+            </div>
+
+            <div class="objectives">
+                <div class="objective-title">OBJETIVOS DA MISSÃO</div>
+                <div class="objective-item">
+                    <div class="objective-checkbox completed"></div>
+                    <div class="objective-text completed">
+                        Infiltrar Setor 7
+                    </div>
+                </div>
+                <div class="objective-item">
+                    <div class="objective-checkbox completed"></div>
+                    <div class="objective-text completed">
+                        Desativar Rede de Segurança
+                    </div>
+                </div>
+                <div class="objective-item">
+                    <div class="objective-checkbox"></div>
+                    <div class="objective-text">Extrair Núcleo de Dados</div>
+                </div>
+                <div class="objective-item">
+                    <div class="objective-checkbox"></div>
+                    <div class="objective-text">Eliminar Alvo</div>
+                </div>
+            </div>
+
+            <div class="abilities">
+                <div class="ability ready" title="Ataque Cibernético">
+                    ⚡
+                    <p>q</p>
+                </div>
+                <div class="ability ready" title="Granada EMP">
+                    💣
+                    <p>e</p>
+                    <!-- <div class="ability-cooldown">12s</div> -->
+                </div>
+                <div class="ability ready" title="Manto Furtivo">
+                    👁
+                    <p>r</p>
+                </div>
+                <div class="ability ready" title="Hack Neural">
+                    🧠
+                    <p>t</p>
+                    <!-- <div class="ability-cooldown">8s</div> -->
+                </div>
+            </div>
+
+            <div class="score-panel">
+                <div class="score-item">
+                    <span class="score-label">ABATES:</span>
+                    <span class="score-value">12</span>
+                </div>
+                <div class="score-item">
+                    <span class="score-label">MORTES:</span>
+                    <span class="score-value">3</span>
+                </div>
+                <div class="score-item">
+                    <span class="score-label">K/D:</span>
+                    <span class="score-value">4.0</span>
+                </div>
+                <div class="score-item">
+                    <span class="score-label">PONTUAÇÃO:</span>
+                    <span class="score-value">2.847</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="image-overlay" id="imageOverlay">
+            <img src="res/map.png" alt="Imagem" class="overlay-image" />
+            <div class="image-close-hint">
+                Pressione <span class="key-hint">M</span> para fechar
+            </div>
+        </div>
+
+        <div class="pause-menu" id="pauseMenu">
+            <div class="pause-container">
+                <div class="pause-title">SISTEMA PAUSADO</div>
+                <div class="pause-menu-items">
+                    <div class="pause-menu-item" onclick="closePauseMenu()">
+                        CONTINUAR
+                    </div>
+                    <div class="pause-menu-item">INVENTÁRIO</div>
+                    <a href="custom.html">
+                        <div class="pause-menu-item">CUSTOMIZAÇÃO</div>
+                    </a>
+                    <div class="pause-menu-item">CONFIGURAÇÕES</div>
+                    <a href="missions.html">
+                        <div class="pause-menu-item">MISSÕES</div>
+                    </a>
+                    <div
+                        class="pause-menu-item danger"
+                        onclick="returnToMainMenu()"
+                    >
+                        SAIR PARA O MENU
+                    </div>
+                    <div class="pause-instructions">
+                        Pressione <span class="key-hint">ESC</span> para fechar
+                        o menu
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="res/HDRImage.js"></script>
+        <script src="js/gameScene.js"></script>
+        <script src="js/game.js"></script>
+    </body>
+</html>

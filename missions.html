@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Psychosocial - Missões</title>
+        <link
+            rel="stylesheet"
+            href="style/missions.css
+    "
+        />
+    </head>
+    <body>
+        <a href="game.html" class="back-button">← Voltar</a>
+
+        <div class="missions-container">
+            <div class="page-header">
+                <h1 class="page-title">MISSÕES</h1>
+                <p class="page-subtitle">
+                    Selecione uma missão para começar sua jornada
+                </p>
+            </div>
+
+            <div class="missions-grid">
+                <!-- Missão 1 - Disponível -->
+                <div class="mission-card">
+                    <div class="mission-header">
+                        <h3 class="mission-title">INFILTRAÇÃO URBANA</h3>
+                        <span class="mission-status status-available"
+                            >Disponível</span
+                        >
+                    </div>
+                    <p class="mission-description">
+                        Infiltre-se no complexo corporativo da MegaCorp e
+                        recupere dados cruciais sobre o Projeto Aurora. Evite
+                        sistemas de segurança e elimine alvos designados.
+                    </p>
+                    <div class="mission-objectives">
+                        <div class="objectives-title">Objetivos:</div>
+                        <div class="objective-item">
+                            <div class="objective-checkbox"></div>
+                            <span>Infiltrar Setor Alpha</span>
+                        </div>
+                        <div class="objective-item">
+                            <div class="objective-checkbox"></div>
+                            <span>Hackear Terminal Principal</span>
+                        </div>
+                        <div class="objective-item">
+                            <div class="objective-checkbox"></div>
+                            <span>Eliminar 3 Guardas de Elite</span>
+                        </div>
+                    </div>
+                    <div class="mission-rewards">
+                        <div class="reward-item reward-xp">
+                            <span>1,500 XP</span>
+                        </div>
+                        <div class="reward-item reward-credits">
+                            <span>2,500 Créditos</span>
+                        </div>
+                    </div>
+                    <button class="mission-action" onclick="startMission(1)">
+                        Iniciar Missão
+                    </button>
+                </div>
+
+                <!-- Missão 2 - Concluída -->
+                <div class="mission-card completed">
+                    <div class="mission-header">
+                        <h3 class="mission-title">RESGATE NO DISTRITO</h3>
+                        <span class="mission-status status-completed"
+                            >Concluída</span
+                        >
+                    </div>
+                    <p class="mission-description">
+                        Resgate o cientista Dr. Kawa das garras da facção
+                        rebelde. Navegue pelas ruas perigosas do Distrito 9 e
+                        complete a extração.
+                    </p>
+                    <div class="mission-objectives">
+                        <div class="objectives-title">Objetivos:</div>
+                        <div class="objective-item">
+                            <div class="objective-checkbox completed"></div>
+                            <span>Localizar Dr. Kawa</span>
+                        </div>
+                        <div class="objective-item">
+                            <div class="objective-checkbox completed"></div>
+                            <span>Eliminar Líderes Rebeldes</span>
+                        </div>
+                        <div class="objective-item">
+                            <div class="objective-checkbox completed"></div>
+                            <span>Escolta Segura</span>
+                        </div>
+                    </div>
+                    <div class="mission-rewards">
+                        <div class="reward-item reward-xp">
+                            <span>1,200 XP</span>
+                        </div>
+                        <div class="reward-item reward-credits">
+                            <span>1,800 Créditos</span>
+                        </div>
+                    </div>
+                    <button class="mission-action completed">
+                        Missão Concluída
+                    </button>
+                </div>
+
+                <!-- Missão 3 - Disponível -->
+                <div class="mission-card">
+                    <div class="mission-header">
+                        <h3 class="mission-title">OPERAÇÃO TEMPESTADE</h3>
+                        <span class="mission-status status-available"
+                            >Disponível</span
+                        >
+                    </div>
+                    <p class="mission-description">
+                        Assalte a fortaleza inimiga durante uma tempestade
+                        cibernética. Use a distração ambiental para completar
+                        objetivos de alta prioridade.
+                    </p>
+                    <div class="mission-objectives">
+                        <div class="objectives-title">Objetivos:</div>
+                        <div class="objective-item">
+                            <div class="objective-checkbox"></div>
+                            <span>Destruir Geradores de Energia</span>
+                        </div>
+                        <div class="objective-item">
+                            <div class="objective-checkbox"></div>
+                            <span>Plantar Cargas Explosivas</span>
+                        </div>
+                        <div class="objective-item">
+                            <div class="objective-checkbox"></div>
+                            <span>Evacuar em 10 Minutos</span>
+                        </div>
+                    </div>
+                    <div class="mission-rewards">
+                        <div class="reward-item reward-xp">
+                            <span>2,200 XP</span>
+                        </div>
+                        <div class="reward-item reward-credits">
+                            <span>3,500 Créditos</span>
+                        </div>
+                    </div>
+                    <button class="mission-action" onclick="startMission(3)">
+                        Iniciar Missão
+                    </button>
+                </div>
+
+                <!-- Missão 4 - Bloqueada -->
+                <div class="mission-card locked">
+                    <div class="mission-header">
+                        <h3 class="mission-title">NEXUS FINAL</h3>
+                        <span class="mission-status status-locked"
+                            >Bloqueada</span
+                        >
+                    </div>
+                    <p class="mission-description">
+                        A batalha final contra o sistema de IA corrupto. Apenas
+                        os mais preparados podem enfrentar este desafio supremo.
+                    </p>
+                    <div class="mission-objectives">
+                        <div class="objectives-title">Objetivos:</div>
+                        <div class="objective-item">
+                            <div class="objective-checkbox"></div>
+                            <span>Infiltrar Núcleo Central</span>
+                        </div>
+                        <div class="objective-item">
+                            <div class="objective-checkbox"></div>
+                            <span>Derrotar IA Guardião</span>
+                        </div>
+                        <div class="objective-item">
+                            <div class="objective-checkbox"></div>
+                            <span>Restaurar Sistema</span>
+                        </div>
+                    </div>
+                    <div class="mission-rewards">
+                        <div class="reward-item reward-xp">
+                            <span>5,000 XP</span>
+                        </div>
+                        <div class="reward-item reward-credits">
+                            n>
+                            <span>10,000 Créditos</span>
+                        </div>
+                    </div>
+                    <button class="mission-action" disabled>
+                        Requer Nível 15
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function startMission(missionId) {
+                // Aqui você pode adicionar lógica para iniciar a missão
+                console.log(`Iniciando missão ${missionId}`);
+                // Por exemplo, redirecionar para o jogo:
+                // window.location.href = 'game.html';
+            }
+
+            // Animação de entrada
+            document.addEventListener("DOMContentLoaded", function () {
+                const cards = document.querySelectorAll(".mission-card");
+                cards.forEach((card, index) => {
+                    card.style.animationDelay = `${index * 0.1}s`;
+                });
+            });
+        </script>
+    </body>
+</html>
